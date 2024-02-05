@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audiometer</title>
+  
+    <!--Icon-->
+    <link rel="icon" href="image/cat-coin.ico" type="image/x-icon" />
+  
+    <!--Offline Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    <script src="bootstrap-offline/js/jquery-3.6.0.js"></script>
+    <script src="bootstrap-offline/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="bootstrap-offline/css/bootstrap.css">
+  
+    <!--Offline Font Awesome-->
+    <script src="https://kit.fontawesome.com/8ae51e785b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="icons/css/all.min.css">
+    <script src="https://kit.fontawesome.com/8ae51e785b.js" crossorigin="anonymous"></script>
+  
+    <!--CSS Style-->
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/dropdown.css">
+    <link rel="stylesheet" href="style/test.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap" rel="stylesheet">
+  
+    <!--JS Script  -->
+    <script src="script.js"></script>
+    <script src="test.js"></script>
+  </head>
+
+<body>
+
+    <!--NavBar-->
+    <nav id="navigation" class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand brand-title" href="#">Audiometer</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+
+          <li class="nav-item links">
+            <div class="dropdown">
+              <a class="nav-link" href="dashboard.html">Home</a>
+              <div class="dropdown-content">
+                <a class="nav-link links" href="dashboard.html#about">About</a>
+                <a class="nav-link links" href="#Card">FAQ</a>
+                <a class="nav-link links" href="dashboard.html#contact">Contact</a>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active-link" href="test.html">Test</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link links" href="#contact">Records</a>
+          </li>
+          <li class="nav-item">
+            <div class="dropdown">
+              <button class="btn btn-outline-light btn-lg btn-title dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-user"></i>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="nav-link links dropdown-item" type="button">Edit Profile</a></li>
+                <li><a class="nav-link links dropdown-item" type="button" href="logout.php">Log Out</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section id="hearing-test">
+      <h1>Hearing Test</h1>
+      
+      <p>
+        Adjust the volume slider when you are ready to hear the tone. <br>
+        Click <span style="color:rgb(255, 108, 71); font-weight: 700;">NEXT</span> when you can hear the<span style="color:rgb(255, 108, 71); font-weight: 700;">softest or slightest</span> tone.
+      </p>
+      
+
+      <div class="tester">
+        
+        <h4>Current Frequency: <span id="currentFrequency">500 Hz</span></h4>
+        <h4 class="ear">Ear: <span id="currentEar">Left</span></h4>
+
+        <div class="volume-box">
+          <label for="volumeSlider">Volume: <span id="currentVolume">0 dB</span></label>
+          <input type="range" id="volumeSlider" min="0" max="120" step="1" value="0" oninput="updateVolumeValue()">
+        </div>
+
+        <div class="test-btn">
+          <button class="test_btn" onclick="playTone()"><i class="fa-solid fa-play fab-icon"></i>Play</button>
+          <button class="test_btn" onclick="pauseTone()"><i class="fa-solid fa-pause fab-icon"></i>Pause</button>
+          <button class="test_btn" onclick="nextFrequency()"><i class="fa-solid fa-fast-forward fab-icon"></i>Next</button>
+        </div>
+
+        <div class="complete-btn-container">
+          <button class="test_btn complete-btn" style="display: none; background: #1cd162;" onclick="completeTest()">Show Results</button>
+        </div>
+      </div>
+
+    </section>
+
+</body>
+</html>

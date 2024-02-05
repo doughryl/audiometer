@@ -1,0 +1,211 @@
+.navbar-nav .nav-item .nav-link.active-link {
+  font-family: 'Poppins-Light', sans-serif;
+  font-weight: 300;
+  font-size: 1.20rem;
+  color: rgb(255, 108, 71);
+}
+
+#test{
+  background-color: rgb(255, 246, 244);
+  padding: 0 5%;
+}
+
+.gender-box, .age-box{
+  font-family: 'Poppins-Bold', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.gender-box{
+  margin-left: 20%;
+}
+
+.age-box{
+  margin: 15px 0 0 26.5%;
+}
+
+.gender-box select{
+  width: 39%;
+  margin-left: 10px;
+  font-size: 17px;
+  font-family: 'Poppins-Reg', sans-serif;
+}
+
+.age-box input{
+  font-family: 'Poppins-Reg', sans-serif;
+  margin-left: 10px;
+  border: none;
+  border-bottom: 1.5px solid grey;
+  outline: none;
+  font-size: 17px;
+  width: 43%;
+}
+
+.age-box input:focus,
+.gender-box select:focus{
+  border-color: rgb(255, 108, 71);
+}
+
+.form_btn{
+  color: #fff;
+  font-size: 18px;
+  background: rgb(255, 108, 71);
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.form_btn:hover{
+  background: rgb(255, 108, 71);
+}
+
+.question-box{
+  background: #fff;
+  padding: 5% 5%;
+  width: 60%;
+  border-radius: 12px;
+}
+
+.question-box h1,
+.instruction-box h1,
+#hearing-test h1 {
+  font-family: 'Poppins-Bold', sans-serif;
+  font-weight: 700;
+}
+
+.instruction-box p {
+  font-size: 16px;
+  text-align: left;
+}
+
+.instruction-grid{
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+  padding: 0 10%;
+}
+
+.instruction-box{
+  background: #fff;
+  padding: 5% 5%;
+  width: 35.4%;
+  border-radius: 12px;
+}
+
+
+/*Hearing Test*/
+
+#hearing-test{
+  width: 70%;
+  margin-left: 14%;
+  border-radius: 12px;
+  background-color: #fff;
+  padding: 3.5%;
+}
+
+#volumeSlider {
+  width: 40%;
+}
+
+.test-btn{
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+  justify-content: center;
+}
+
+.complete-btn-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.test_btn{
+  color: #fff;
+  font-size: 16px;
+  background: #FD613A;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 30px;
+}
+
+.test_btn:hover{
+  background: rgb(255, 108, 71);
+}
+
+.tester h4{
+  font-family: 'Poppins-Bold', sans-serif;
+  text-align: center;
+  font-weight: 700;
+}
+
+#currentFrequency, #currentEar{
+  color: rgb(255, 108, 71);
+}
+
+.ear {
+  text-align: center;
+  font-weight: 700;
+}
+
+.volume-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.tester{
+  margin-top: 40px;
+  border-radius: 12px;
+}
+
+@media (max-width: 1060px) {
+  .instruction-grid{
+    margin-top: 40px;
+    row-gap: 20px;
+    padding: 0 10%;
+    flex-direction: column-reverse;
+  }
+
+  .question-box{
+    background: #fff;
+    padding: 5% 5%;
+    border-radius: 12px;
+    width: 100%;
+  }
+
+  .instruction-box{
+    background: #fff;
+    padding: 5% 5%;
+    border-radius: 12px;
+    width: 100%;
+  }
+
+  .gender-box{
+    margin-left: 0;
+  }
+  
+  .age-box{
+    margin: 0;
+    margin-left: 37px;
+  }
+
+  .age-box input{
+    width: 55%;
+  }
+
+  .gender-box select{
+    width: 49%;
+  }
+}
