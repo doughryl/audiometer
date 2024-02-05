@@ -52,18 +52,18 @@
             <div class="dropdown">
               <a class="nav-link" href="dashboard.html">Home</a>
               <div class="dropdown-content">
-                <a class="nav-link links" href="">About</a>
-                <a class="nav-link links" href="">FAQ</a>
-                <a class="nav-link links" href="">Contact</a>
+                <a class="nav-link links" href="dashboard.html#about">About</a>
+                <a class="nav-link links" href="#Card">FAQ</a>
+                <a class="nav-link links" href="dashboard.html#contact">Contact</a>
               </div>
             </div>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link active-link" href="demo.html">Test</a>
+            <a class="nav-link active-link" href="test.html">Test</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link links" href="">Records</a>
+            <a class="nav-link links" href="#contact">Records</a>
           </li>
           <li class="nav-item">
             <div class="dropdown">
@@ -72,7 +72,7 @@
               </button>
               <ul class="dropdown-menu">
                 <li><a class="nav-link links dropdown-item" type="button">Edit Profile</a></li>
-                <li><a class="nav-link links dropdown-item" type="button" href="">Log Out</a></li>
+                <li><a class="nav-link links dropdown-item" type="button" href="logout.php">Log Out</a></li>
               </ul>
             </div>
           </li>
@@ -87,28 +87,10 @@
         Adjust the volume slider when you are ready to hear the tone. <br>
         Click <span style="color:rgb(255, 108, 71); font-weight: 700;">NEXT</span> when you can hear the<span style="color:rgb(255, 108, 71); font-weight: 700;">softest or slightest</span> tone.
       </p>
-      
 
-      <div class="tester">
-        
-        <h4>Current Frequency: <span id="currentFrequency">500 Hz</span></h4>
-        <h4 class="ear">Ear: <span id="currentEar">Left</span></h4>
-
-        <div class="volume-box">
-          <label for="volumeSlider">Volume: <span id="currentVolume">0 dB</span></label>
-          <input type="range" id="volumeSlider" min="0" max="120" step="1" value="0" oninput="updateVolumeValue()">
-        </div>
-
-        <div class="test-btn">
-          <button class="test_btn" onclick="playTone()"><i class="fa-solid fa-play fab-icon"></i>Play</button>
-          <button class="test_btn" onclick="pauseTone()"><i class="fa-solid fa-pause fab-icon"></i>Pause</button>
-          <button class="test_btn" onclick="nextFrequency()"><i class="fa-solid fa-fast-forward fab-icon"></i>Next</button>
-        </div>
-
-        <div class="complete-btn-container">
-          <button class="test_btn complete-btn" style="display: none; background: #1cd162;" onclick="window.location.href='demo1.html'">Again</button>
-        </div>
-      </div>
+      <button class="test_btn" onclick="window.location.href='demo1.html'">
+        <i class="fa-solid fa-play fab-icon"></i>Start
+      </button>
 
     </section>
 
